@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: sans-serif;
+    color: white
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #0A0A0A;
+    height: 100vh
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #494949;
+}
+
+.landing .navbar {
+    width: 100%;
+    height: 15vh;
+    border-bottom: 1px solid #494949;
+    background-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.navbar .container {
+    width: 15%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img {
+    width: 60px;
+    border-radius: 50px;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+}
+
+.container img, .container .title {
+    margin: 1rem
+}
+
+.navbar .list {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .options {
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%
+}
+
+.options li {
+    width: 15rem;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: font-size 0.3s ease-out;
+}
+
+.options li:hover {
+    font-size: 2rem;
+    transition: font-size 0.3s ease-in;
+}
+
+.options li span {
+    color: #b8b8b8;
+}
+
+.navbar .additional {
+    width: 25%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additional ion-icon {
+    font-size: 2rem;
+    transition: font-size 0.3s ease-out;
+}
+
+.additional ion-icon:hover {
+    font-size: 2.5rem;
+    transition: 0.3s ease-in
+}
+
+.additional button {
+    background-color: #BF1D2A;
+    width: 70%;
+    height: 7vh;
+    border: none;
+    border-radius: 13px;
+    font-size: 1.5rem;
+    transition: width 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    transition: font-size 0.3s ease-out;
+}
+
+.additional button:hover {
+    width: 75%;
+    height: 8vh;
+    border-radius: 13px;
+    font-size: 1.7rem;
+    transition: 0.3s ease-in;
+}
+
+.additional ion-icon, .additional button {
+    margin: auto
+}
+
+.container, .options, .additional {
+    margin: auto;
+}
+
+.landing .about {
+    width: 100%;
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .left {
+    width: 60%;
+    height: 45vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.about .content {
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #d85c66, #e24653, #880712);
+    -webkit-background-clip: text; /* For webkit-based browsers */
+    background-clip: text; /* For other modern browsers */
+    color: transparent; /* Makes the text itself transparent to show the gradient */
+}
+
+.content p {
+    font-size: 1.8rem;
+    color: rgb(193, 193, 193)
+}
+
+.left .buttons {
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons #add {
+    background: #BF1D2A;
+}
+
+.buttons button {
+    background-color: transparent;
+    width: 45%;
+    height: 9vh;
+    border: 2px solid #BF1D2A;
+    border-radius: 13px;
+    margin: auto;
+    font-size: 2rem;
+    transition: width 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    transition: font-size 0.3s ease-out;
+}
+
+.buttons button:hover {
+    width: 50%;
+    height: 10vh;
+    border-radius: 13px;
+    font-size: 2.5rem;
+    transition: 0.3s ease-in;
+}
+
+.about .img {
+    width: 25%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 100%;
+}
+
+.about .content, .about .img {
+    margin: auto
+}
+
+
+
+
+
+
+.functions {
+    width: 100%;
+    height: 200vh;
+    display: grid;
+    place-items: center;
+}
+
+.functions h1 {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #d85c66, #e24653, #880712);
+    -webkit-background-clip: text; /* For webkit-based browsers */
+    background-clip: text; /* For other modern browsers */
+    color: transparent; /* Makes the text itself transparent to show the gradient */
+}
+
+.functions .funcbox {
+    width: 80%;
+    height: 60vh;
+    border: 1px solid #BF1D2A;
+    box-shadow: 10px 10px 20px #BF1D2A;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.funcbox img {
+    border-radius: 40px;
+}
