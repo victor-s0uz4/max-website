@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
-        <title>Document</title>
+
+        <link rel="icon" type="image/x-icon" href="./public/max.jpg">
+        <title>Max™</title>
     </head>
     <body>
-        <main class="landing">
+        <section class="landing">
             <nav class="navbar">
                 <div class="container">
                     <img src="/public/max.jpg" />
@@ -15,25 +17,25 @@
                 </div>
                 <div class="list">
                     <ul class="options">
-                        <li href="about">
+                        <li>
                             <span>
-                                Sobre Mim
+                                <a href="#about">Sobre Mim</a>
                             </span>
                         </li>
-                        <li href="functions">
+                        <li>
                             <span>
-                                Funções
+                                <a href="#functions">Funções</a>
                             </span>
                         </li>
-                        <li href="commands">
+                        <li>
                             <span>
-                                Comandos
+                                <a href="#commands">Comandos</a>
                             </span>
                         </li>
                     </ul>
                 </div>
                 <div class="additional">
-                    <ion-icon name="sunny-outline"></ion-icon>
+                    <ion-icon id="theme-toggle" name="sunny-outline"></ion-icon>
                     <button><a href="">Me Adicione!</a></button>
                 </div>
             </nav>
@@ -50,68 +52,48 @@ Estou aqui para ajudar a tornar seu servidor mais organizado e divertido! Comigo
                     </br> </br> </br>
                     <div class="buttons">
                         <button id="add"><a href="">Me Adicione!</a></button>
-                        <button><a href="">Suporte</a></button>
+                        <button id="support"><a href="">Suporte</a></button>
                     </div>
                 </div>
                 <div class="img">
                     <img src="/public/max.jpg" />
                 </div>
             </div>
-        </main>
+        </section>
 
-        <div class="functions">
-            <h1>Minhas Funções</h1>
-            <div class="funcbox">
-                <img src="/public/util.png" />
-                <div class="right">
+        <section id="functions" class="functions">
+            <h1 class="title">Minhas Funções</h1>
+            <div class="boxes">
+                <div class="funcbox">
                     <h1>Utilidades</h1>
                     <p>
                         Eu possuo uma variedade de comandos de utilidades projetados para tornar a administração do seu servidor muito mais fácil e eficiente. Com minhas funções, você pode gerenciar membros, automatizar tarefas, fornecer informações úteis e até melhorar a interação entre os usuários. Seja para organização, moderação ou simplesmente para facilitar o dia a dia, estou aqui para ajudar seu servidor a funcionar da melhor forma possível! 🚀
                     </p>
                 </div>
-            </div>
-            <div class="funcbox">
-                <img src="/public/eco.png" />
-                <div class="right">
-                    <h1>Economia</h1>
+                <div class="funcbox">
+                     <h1>Economia</h1>
                     <p>
                         Eu conto com diversos comandos de economia para tornar a experiência dos membros do seu servidor mais interativa e envolvente! Com um sistema dinâmico de moedas virtuais, os usuários podem ganhar recompensas, realizar transações, administrar suas próprias lojas e competir em rankings. Tudo isso cria um ambiente divertido, onde a economia do servidor se torna um jogo à parte, incentivando a participação e a interação entre os membros! 🚀
                     </p>
                 </div>
             </div>
-        </div>
-
-        <div class="commands">
-            <div class="box bot">
-                <span>Comandos Sobre Mim.</span>
-                <ion-icon name="add-outline"></ion-icon>
-                <div class="bothidden"></div>
-            </div>
-            <div class="box utilities">
-                <span>Comandos De Utilidades.</span>
-                <ion-icon name="add-outline"></ion-icon>
-            </div>
-            <div class="box economy">
-                <span>Comandos De Economia.</span>
-                <ion-icon name="add-outline"></ion-icon>
-            </div>
-        </div>
-
+        </section>
+        
         <footer>
             <div class="bot">
                 <img src="/public/max.jpg" />
                 <h1>Max™</h1>
             </div>
             <div class="socials">
-                <span><ion-icon name="logo-facebook"></ion-icon></span>
-                <span><ion-icon name="logo-instagram"></ion-icon></span>
-                <span><ion-icon name="mail-open-outline"></ion-icon></span>
-                <span><ion-icon name="logo-github"></ion-icon></span>
-                <span><ion-icon name="logo-discord"></ion-icon></span>
+                <span class="bg-face"><ion-icon class="fi-face" name="logo-facebook"></ion-icon></span>
+                <span class="bg-ig"><ion-icon class="fi-ig" name="logo-instagram"></ion-icon></span>
+                <span class="bg-mail"><ion-icon class="fi-mail" name="mail-open-outline"></ion-icon></span>
+                <span class="bg-git"><ion-icon class="fi-git" name="logo-github"></ion-icon></span>
+                <span class="bg-dc"><ion-icon class="fi-dc" name="logo-discord"></ion-icon></span>
             </div>
             <div class="fbuttons">
                 <button id="add"><a href="">Me Adicione!</a></button>
-                <button><a href="">Suporte</a></button>
+                <button id="support"><a href="">Suporte</a></button>
             </div>
         </footer>
 

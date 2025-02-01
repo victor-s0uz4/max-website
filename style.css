@@ -1,17 +1,46 @@
+:root {
+    --backgroundimage: radial-gradient(rgba(255, 255, 255, 0.09) 2px, transparent 2px);
+    --background: #000000;
+    --background2: #000000;
+    --text-gradient: linear-gradient(to right, #d85c66, #e24653, #880712);
+    --text: #bababa;
+    --text2: #ffffff;
+    --shadow: #111111;
+
+    --red: #BF1D2A;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: none;
     font-family: sans-serif;
-    color: white
+    color: var(--text);
+}
+
+link[rel="icon"] {
+    border-radius: 50%;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
+    color: var(--text2);
+}
+
+ion-icon {
+    color: var(--text);
+}
+
+ul {
+    list-style: none;
 }
 
 body {
-    background-color: #0A0A0A;
+    background-color: var(--background);
     height: 100vh
 }
 
@@ -19,14 +48,17 @@ body {
     width: 100%;
     height: 100vh;
     border-bottom: 1px solid #494949;
+    background-image: var(--backgroundimage);
+    background-size: 40px 40px;
 }
 
 .landing .navbar {
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     border-bottom: 1px solid #494949;
-    background-color: #0A0A0A;
+    background-color: var(--background);
     display: flex;
+    z-index: 10;
     align-items: center;
     position: fixed;
 }
@@ -83,8 +115,8 @@ body {
     transition: font-size 0.3s ease-in;
 }
 
-.options li span {
-    color: #b8b8b8;
+.options li span a {
+    color: var(--text)
 }
 
 .navbar .additional {
@@ -98,6 +130,7 @@ body {
 .additional ion-icon {
     font-size: 2rem;
     transition: font-size 0.3s ease-out;
+    color: var(--text)
 }
 
 .additional ion-icon:hover {
@@ -106,15 +139,15 @@ body {
 }
 
 .additional button {
-    background-color: #BF1D2A;
+    background-color: var(--red);
+    color: var(--text);
     width: 70%;
     height: 7vh;
     border: none;
     border-radius: 13px;
+    border: none;
     font-size: 1.5rem;
-    transition: width 0.5s ease-out;
-    transition: height 0.5s ease-out;
-    transition: font-size 0.3s ease-out;
+    transition: width 0.3s ease-out, height 0.3s ease-out, font-size 0.3s ease-out;
 }
 
 .additional button:hover {
@@ -156,7 +189,7 @@ body {
 
 .content h1 {
     font-size: 4rem;
-    background-image: linear-gradient(to right, #d85c66, #e24653, #880712);
+    background-image: var(--text-gradient);
     -webkit-background-clip: text; /* For webkit-based browsers */
     background-clip: text; /* For other modern browsers */
     color: transparent; /* Makes the text itself transparent to show the gradient */
@@ -164,7 +197,7 @@ body {
 
 .content p {
     font-size: 1.8rem;
-    color: rgb(193, 193, 193)
+    color: var(--text)
 }
 
 .left .buttons {
@@ -176,20 +209,22 @@ body {
 }
 
 .buttons #add {
-    background: #BF1D2A;
+    background: var(--red);
+}
+
+.buttons #support a {
+    color: var(--text);
 }
 
 .buttons button {
     background-color: transparent;
     width: 45%;
     height: 9vh;
-    border: 2px solid #BF1D2A;
+    border: 2px solid var(--red);
     border-radius: 13px;
     margin: auto;
     font-size: 2rem;
-    transition: width 0.5s ease-out;
-    transition: height 0.5s ease-out;
-    transition: font-size 0.3s ease-out;
+    transition: width 0.3s ease-out, height 0.3s ease-out, font-size 0.3s ease-out;
 }
 
 .buttons button:hover {
@@ -224,13 +259,26 @@ body {
 
 .functions {
     width: 100%;
-    height: 150vh;
-    display: grid;
-    place-items: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #494949;
+    background-image: var(--backgroundimage);
+    background-size: 40px 40px;
 }
 
-.functions h1 {
+.functions .boxes {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.functions .title {
+    padding-top: 50px;
     font-size: 4rem;
     background-image: linear-gradient(to right, #d85c66, #e24653, #880712);
     -webkit-background-clip: text;
@@ -239,85 +287,39 @@ body {
 }
 
 .functions .funcbox {
-    width: 80%;
-    height: 50vh;
-    border: 1px solid #BF1D2A;
-    box-shadow: 10px 10px 20px #BF1D2A;
+    width: 45%;
+    height: 45vh;
+    background: var(--background2);
+    border: 1px solid #282828;
+    box-shadow: 15px 15px 25px var(--shadow);
     border-radius: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.funcbox img {
-    border-radius: 40px;
-    width: 50%;
-}
-
-.funcbox p {
-    font-size: 1.5rem;
-    text-align: center;
-    color: #b8b8b8;
-}
-
-.funcbox .right {
-    width: 40%;
-    display: grid;
-    place-items: center;
-}
-
-.funcbox .right, .funcbox img {
     margin: auto;
 }
 
-
-
-
-.commands {
-    width: 100%;
-    height: 50vh;
-    border-bottom: 1px solid #2d2d2d;
-    display: grid;
-    place-items: center;
-    border-bottom: 1px solid #494949;
+.funcbox h1 {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #d85c66, #e24653, #880712);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.commands .box {
-    width: 60%;
-    height: 10vh;
-    background-color: #070707;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box span {
+.funcbox p {
+    width: 80%;
     font-size: 1.5rem;
-    width: 85%;
-    color: #b8b8b8;
+    text-align: center;
+    color: var(--text);
 }
-
-.box span, .box ion-icon {
-    font-size: 1.5rem;
-    margin: auto
-}
-
-.bothidden {
-    width: inherit;
-    height: 30vh;
-    display: none;
-    place-items: center;
-}
-
-
-
 
 
 footer {
     width: 100%;
     height: 50vh;
-    background-color: #000000;
+    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,12 +357,19 @@ footer .socials {
 .socials span {
     width: 80px;
     height: 80px;
-    border: 2px solid #BF1D2A;
+    border: 2px solid var(--red);
     border-radius: 50px;
     display: flex;
     align-items: centerl;
     justify-content: center;
     margin: auto;
+    cursor: pointer;
+    transition: background 0.3s ease-out;
+}
+
+.socials span:hover {
+    background: var(--red);
+    transition: 0.2s ease-in;
 }
 
 .socials ion-icon {
@@ -379,23 +388,25 @@ footer .fbuttons {
     background: #BF1D2A;
 }
 
+.fbuttons #support a {
+    color: var(--text1);
+}
+
 .fbuttons button {
     background-color: transparent;
     width: 80%;
     height: 9vh;
-    border: 2px solid #BF1D2A;
+    border: 2px solid var(--red);
     border-radius: 13px;
-    font-size: 2rem;
-    transition: width 0.5s ease-out;
-    transition: height 0.5s ease-out;
-    transition: font-size 0.3s ease-out;
+    font-size: 2.5rem;
+    transition: width 0.3s ease-out, height 0.3s ease-out, font-size 0.3s ease-out;
 }
 
 .fbuttons button:hover {
-    width: 50%;
-    height: 10vh;
+    width: 85%;
+    height: 12vh;
     border-radius: 13px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     transition: 0.3s ease-in;
 }
 
