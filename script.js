@@ -27,10 +27,10 @@ createRoundedFavicon("./public/max.jpg");
 const themeToggle = document.getElementById('theme-toggle');
 
 themeToggle.addEventListener('click', () => {
-    const isDark = document.documentElement.style.getPropertyValue('--background') === '#000000';
+    const isDark = getComputedStyle(document.documentElement).getPropertyValue('--background').trim() === '#000000';
 
     document.documentElement.style.setProperty('--backgroundimage', isDark ? 'radial-gradient(rgba(164, 164, 164, 0.4) 2px, transparent 2px)' : 'radial-gradient(rgba(255, 255, 255, 0.09) 2px, transparent 2px)');
-
+    
     document.documentElement.style.setProperty('--background', isDark ? '#dddddd' : '#000000');
 
     document.documentElement.style.setProperty('--background2', isDark ? '#dddddd' : '#000000');
