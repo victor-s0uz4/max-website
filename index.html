@@ -5,82 +5,252 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
 
-        <link rel="icon" type="image/x-icon" href="./public/max.jpg">
+        <link rel="icon" type="image/x-icon" href="./public/max.png">
         <title>Max™</title>
     </head>
     <body>
-        <section class="landing">
-            <nav class="navbar">
-                <div class="container">
-                    <img src="/public/max.jpg" />
-                    <h1>Max™</h1>
-                </div>
-                <div class="list">
-                    <ul class="ul1 options">
-                        <li>
-                            <span>
-                                <a href="#about">Sobre Mim</a>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <a href="#functions">Funções</a>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <a href="#commands">Comandos</a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="additional">
-                    <ion-icon id="theme-toggle" name="sunny-outline"></ion-icon>
-                    <button><a href="">Me Adicione!</a></button>
-                </div>
-                <ion-icon class="menuicon" name="menu-outline"></ion-icon>
-            </nav>
-            <div id="about" class="about">
-                <div class="left">
-                    <div class="content">
-                        <h1>Max™<span>, Maximizando Servidores.</span></h1> </br>
-                        <p>
-                            Oi, eu sou o Max – seu bot de economia e utilidades para Discord! Estou aqui para ajudar a tornar seu servidor mais organizado e divertido! Comigo, você pode gerenciar moedas virtuais, criar lojas, acompanhar rankings e realizar transações com facilidade. Além disso, tenho vários comandos úteis para administração, automação e muito mais. Simples, eficiente e pronto para o que você precisar! 🚀
-                        </p>
-                    </div>
-                    </br> </br> </br>
-                    <div class="buttons">
-                        <button id="add"><a href="">Me Adicione!</a></button>
-                        <button id="support"><a href="">Suporte</a></button>
-                    </div>
-                </div>
-                <div id="pc" class="img">
-                    <img src="/public/max.jpg" />
-                </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#about"> Sobre Mim </a>
+                </li>
+                <li>
+                    <a href="#functions"> Funcionalidades </a>
+                </li>
+                <li>
+                    <a href="#commands"> Comandos </a>
+                </li>
+                <li>
+                    <a  href="#devs"> Desenvolvedores </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo"> <img width="40px" src="/public/max.png" /> <span>Max™</span> </div>
+            <div class="icons"> 
+                <ion-icon class="toggle-theme" name="sunny-outline"></ion-icon>
+                <ion-icon class="toggle-menu" name="chevron-up-outline"></ion-icon>
+            </div>
+        </nav>
+
+        <section id="about" class="landing">
+            <div class="picture"> <img src="/public/max.png" /> </div>
+            <div class="content">
+                <h1>Max™,<br class="break"/> Maximizando Servidores</h1>
+                <p>Seja bem-vindo(a) ao meu website! Meu nome é <span>Max</span> e eu sou um bot multi-funcional para seu servidor/comunidade do <span>Discord.</span> Eu fui desenvolvido na linguagem <span>Javascript</span> utilizando a livraria <span>Discord.js</span>. No momento eu tenho comandos de <span>Utilidades</span>, <span>Economia</span> e também conto com uma <span>Inteligência Artificial</span> implantada em meu sistema que funciona quando chamam meu nome como prefixo no chat.</p>
+            </div>
+            <div class="buttons">
+                <button id="add"><a>Me Adicione!</a></button>
+                <button id="support"><a>Suporte</a></button>
             </div>
         </section>
 
         <section id="functions" class="functions">
-            <h1 class="title">Minhas Funções</h1>
-            <div class="boxes">
-                <div class="funcbox">
-                    <h1>Utilidades</h1>
+            <h1>Minhas Funcionalidades</h1>
+            <div class="content">
+                <div class="container">
+                    <h2>Utilidades</h2>
                     <p>
                         Eu possuo uma variedade de comandos de utilidades projetados para tornar a administração do seu servidor muito mais fácil e eficiente. Com minhas funções, você pode gerenciar membros, automatizar tarefas, fornecer informações úteis e até melhorar a interação entre os usuários. Seja para organização, moderação ou simplesmente para facilitar o dia a dia, estou aqui para ajudar seu servidor a funcionar da melhor forma possível! 🚀
                     </p>
                 </div>
-                <div class="funcbox">
-                     <h1>Economia</h1>
+
+                <div class="container">
+                    <h2>Economia</h2>
                     <p>
-                        Eu conto com diversos comandos de economia para tornar a experiência dos membros do seu servidor mais interativa e envolvente! Com um sistema dinâmico de moedas virtuais, os usuários podem ganhar recompensas, realizar transações, administrar suas próprias lojas e competir em rankings. Tudo isso cria um ambiente divertido, onde a economia do servidor se torna um jogo à parte, incentivando a participação e a interação entre os membros! 🚀
+                        Eu também conto com diversos comandos de economia para tornar a experiência dos membros do seu servidor mais interativa e envolvente! Com um sistema dinâmico de moedas virtuais, os usuários podem ganhar recompensas, realizar transações, administrar suas próprias lojas e competir em rankings. Tudo isso cria um ambiente divertido, onde a economia do servidor se torna um jogo à parte, incentivando a participação e a interação entre os membros! 🚀
+                    </p>
+                </div>
+
+                <div class="container">
+                    <h2>Inteligência Artificial</h2>
+                    <p>
+                        Além do mais, tenho um sistema de IA implantado para te ajudar com respostas breves, diretas e concisas. Minha inteligência é projetada para fornecer informações de forma rápida e eficiente, garantindo clareza e objetividade em cada interação. Seja para esclarecer dúvidas ou otimizar seu tempo, estou aqui para facilitar sua experiência. 🚀
                     </p>
                 </div>
             </div>
         </section>
-        
+
+        <section id="commands" class="commands">
+            <div class="main-container">
+                <div class="text">Comandos Sobre Mim</div>
+                <ion-icon class="icon bot" name="chevron-up-outline"></ion-icon>
+            </div>
+
+            <div class="bot-hidden">
+                <ul>
+                    <li>
+                        <span>help</span>
+                        <p>
+                            Exibir meu painel de comandos.
+                        </p>
+                    </li>
+                    <li>
+                        <span>botinfo</span>
+                        <p>
+                            Exibir minhas informações.
+                        </p>
+                    </li>
+                    <li>
+                        <span>ping</span>
+                        <p>
+                            Exibir meu ping.
+                        </p>
+                    </li>
+                    <li>
+                        <span>uptime</span>
+                        <p>
+                            Exibir meu tempo ativo.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main-container">
+                <div class="text">Comandos De Utilidades</div>
+                <ion-icon class="icon util" name="chevron-up-outline"></ion-icon>
+            </div>
+
+            <div class="util-hidden">
+                <ul>
+                    <li>
+                        <span>useravatar</span>
+                        <p>
+                            Exibir avatar.
+                        </p>
+                    </li>
+                    <li>
+                        <span>channelinfo</span>
+                        <p>
+                            Exibir informações de um canal.
+                        </p>
+                    </li>
+                    <li>
+                        <span>commandinfo</span>
+                        <p>
+                            Exibir informações sobre um comando.
+                        </p>
+                    </li>
+                    <li>
+                        <span>date</span>
+                        <p>
+                            Exibir a data atual.
+                        </p>
+                    </li>
+                    <li>
+                        <span>roleinfo</span>
+                        <p>
+                            Exibir informações sobre um cargo.
+                        </p>
+                    </li>
+                    <li>
+                        <span>say</span>
+                        <p>
+                            Repetir a mensagem dita.
+                        </p>
+                    </li>
+                    <li>
+                        <span>servericon</span>
+                        <p>
+                            Exibir o ícone do servidor.
+                        </p>
+                    </li>
+                    <li>
+                        <span>serverinfo</span>
+                        <p>
+                            Exibir informações sobre o servidor.
+                        </p>
+                    </li>
+                    <li>
+                        <span>serverowner</span>
+                        <p>
+                            Exibir informações sobre o dono do servidor.
+                        </p>
+                    </li>
+                    <li>
+                        <span>userinfo</span>
+                        <p>
+                            Exibir informações sobre si mesmo ou outro usuário.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main-container">
+                <div class="text">Comandos De Economia</div>
+                <ion-icon class="icon eco" name="chevron-up-outline"></ion-icon>
+            </div>
+
+            <div class="eco-hidden">
+                <ul>
+                    <li>
+                        <span>balance</span>
+                        <p>
+                            Exibir seu saldo na carteira ou de outra pessoa.
+                        </p>
+                    </li>
+                    <li>
+                        <span>bank</span>
+                        <p>
+                            Exibir seu saldo na carteira e no banco.
+                        </p>
+                    </li>
+                    <li>
+                        <span>bet</span>
+                        <p>
+                            Apostar com algum usuário.
+                        </p>
+                    </li>
+                    <li>
+                        <span>coinflip</span>
+                        <p>
+                            Apostar no jogo Cara Ou Coroa.
+                        </p>
+                    </li>
+                    <li>
+                        <span>cooldowns</span>
+                        <p>
+                            Exibir o tempo de espera para utilizar comandos.
+                        </p>
+                    </li>
+                    <li>
+                        <span>daily</span>
+                        <p>
+                            Resgatar recompensa diária.
+                        </p>
+                    </li>
+                    <li>
+                        <span>inventory</span>
+                        <p>
+                            Exibir seu inventário ou de outra pessoa.
+                        </p>
+                    </li>
+                    <li>
+                        <span>pay</span>
+                        <p>
+                            Pagar algum usuário.
+                        </p>
+                    </li>
+                    <li>
+                        <span>leaderboard</span>
+                        <p>
+                            Exibir o Top 10 da economia global.
+                        </p>
+                    </li>
+                    <li>
+                        <span>transactions</span>
+                        <p>
+                            Exibir transações recentes.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <footer>
             <div class="bot">
-                <img src="/public/max.jpg" />
+                <img src="/public/max.png" />
                 <h1>Max™</h1>
             </div>
             <div class="socials">
@@ -91,11 +261,10 @@
                 <span class="bg-dc"><ion-icon class="fi-dc" name="logo-discord"></ion-icon></span>
             </div>
             <div class="fbuttons">
-                <button id="add"><a href="">Me Adicione!</a></button>
-                <button id="support"><a href="">Suporte</a></button>
+                <button id="add"><a>Me Adicione!</a></button>
+                <button id="support"><a>Suporte</a></button>
             </div>
         </footer>
-
         <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
