@@ -210,7 +210,7 @@ body {
 
 .functions {
     width: 100%;
-    height: 200vh;
+    height: 220vh;
     background-image: var(--background-image);
     background-size: 40px 40px;
     display: flex;
@@ -222,7 +222,8 @@ body {
 
 .functions h1 {
     padding-top: 40px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
     background-image: var(--text-gradient);
     -webkit-background-clip: text; 
     background-clip: text;
@@ -231,7 +232,7 @@ body {
 
 .functions .content {
     width: 100%;
-    height: 200vh;
+    height: 210vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,8 +241,8 @@ body {
 }
 
 .functions .container {
-    width: 85%;
-    height: 55vh;
+    width: 90%;
+    height: 60vh;
     padding: 30px;
     background: var(--background2);
     border-radius: 20px;
@@ -254,12 +255,13 @@ body {
 }
 
 .functions .container h2 {
-    font-size: 1.8rem;
+    text-align: center;
+    font-size: 2.5rem;
     color: var(--red);
 }
 
 .functions .container p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
 }
 
@@ -268,11 +270,13 @@ body {
     background-size: 40px 40px;
     width: 100%;
     height: 40vh;
+    border-bottom: 1px solid #494949;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    transition: height 0.5s ease-in-out;
 }
 
 .commands .main-container {
@@ -293,118 +297,54 @@ body {
     width: 85%;
 }
 
-.commands .main-container .icon {
+.commands .main-container ion-icon {
     font-size: 1.2rem;
     color: var(--text);
     width: 10%;
     transition: all 0.3s ease-out;
 }
 
-.commands .main-container .icon:hover {
+.commands .main-container ion-icon:hover {
     opacity: 0.4;
     transition: 0.3s ease-in;
 }
 
-.bot-hidden {
-    width: 85%; 
-    height: 25vh;
+.bot-hidden, .util-hidden, .eco-hidden {
+    width: 85%;
+    height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--background2);
     border-radius: 20px;
-    display: none;
-    transition: display 0.5s ease-in-out;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    opacity: 0;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.bot-hidden ul {
+.bot-hidden.active, .util-hidden.active, .eco-hidden.active {
+    opacity: 1;
+}
+
+.bot-hidden ul, .util-hidden ul, .eco-hidden ul {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 20px;
     gap: 25px;
 }
 
-.bot-hidden ul li {
+.bot-hidden ul li, .util-hidden ul li, .eco-hidden ul li {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     gap: 20px;
 }
 
-.bot-hidden ul li span {
-    background: rgb(78, 78, 78);
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.util-hidden {
-    width: 85%; 
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--background2);
-    border-radius: 20px;
-    display: none;
-    transition: display 0.5s ease-in-out;
-}
-
-.util-hidden ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-}
-
-.util-hidden ul li {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    gap: 20px;
-}
-
-.util-hidden ul li span {
-    background: rgb(78, 78, 78);
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.eco-hidden {
-    width: 85%; 
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--background2);
-    border-radius: 20px;
-    display: none;
-    transition: display 0.5s ease-in-out;
-}
-
-.eco-hidden ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-}
-
-.eco-hidden ul li {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    gap: 20px;
-}
-
-.eco-hidden ul li span {
+.bot-hidden ul li span, .util-hidden ul li span, .eco-hidden ul li span {
     background: rgb(78, 78, 78);
     text-align: center;
     font-size: 1.2rem;

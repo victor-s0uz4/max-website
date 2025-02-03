@@ -44,7 +44,6 @@ toggleMenu.addEventListener('click', () => {
 })
 
 const screen = document.querySelector('.commands');
-const height = parseFloat(window.getComputedStyle(screen).height);
 
 const botHidden = document.querySelector('.bot-hidden');
 const utilHidden = document.querySelector('.util-hidden');
@@ -54,34 +53,33 @@ const botToggle = document.querySelector('.bot');
 const utilToggle = document.querySelector('.util');
 const ecoToggle = document.querySelector('.eco');
 
-// Function to handle the toggle logic
 function toggleSection(toggleBtn, section, newHeight) {
-  const display = window.getComputedStyle(section).display;
+    const isActive = section.classList.contains('active');
 
-  // Close other sections before opening the new one
-  [botHidden, utilHidden, ecoHidden].forEach(hiddenSection => {
-      if (hiddenSection !== section) {
-          hiddenSection.style.display = 'none';
-      }
-  });
+    [botHidden, utilHidden, ecoHidden].forEach(hiddenSection => {
+        if (hiddenSection !== section) {
+            hiddenSection.classList.remove('active');
+            hiddenSection.style.height = '0px';
+        }
+    });
 
-  // Check if the clicked section is being opened or closed
-  if (display === 'none') {
-      section.style.display = 'block';
-      screen.style.height = `${newHeight}vh`;
-  } else {
-      section.style.display = 'none';
-      screen.style.height = `${height}px`;
-  }
+    if (!isActive) {
+        section.classList.add('active');
+        section.style.height = `${newHeight}vh`;
+        screen.style.height = `${newHeight + 40}vh`;
+    } else {
+        section.classList.remove('active');
+        section.style.height = '0px';
+        screen.style.height = '40vh';
+    }
 
-  // Toggle rotation using a CSS class
-  toggleBtn.classList.toggle('rotated');
+    toggleBtn.classList.toggle('rotated');
 }
 
-// Event listeners
-botToggle.addEventListener('click', () => toggleSection(botToggle, botHidden, 65));
-utilToggle.addEventListener('click', () => toggleSection(utilToggle, utilHidden, 120));
-ecoToggle.addEventListener('click', () => toggleSection(ecoToggle, ecoHidden, 120));
+botToggle.addEventListener('click', () => toggleSection(botToggle, botHidden, 30));
+utilToggle.addEventListener('click', () => toggleSection(utilToggle, utilHidden, 85));
+ecoToggle.addEventListener('click', () => toggleSection(ecoToggle, ecoHidden, 85));
+
 
 const bgFace = document.getElementsByClassName('bg-face')
 const bgInsta = document.getElementsByClassName('bg-ig')
